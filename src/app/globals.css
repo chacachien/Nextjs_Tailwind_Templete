@@ -1,21 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-bgBase: 39deg 85% 95%;
+    --color-content: 0deg 0% 20%;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* If the user's system preference is dark */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bgBase: 240deg 27% 18%;
+      --color-content: 210deg 14% 53%;
+    }
+  }
+
+  /* If the user switchs dark mode */
+  :root[data-theme="dark"] {
+    --color-bgBase: 240deg 27% 18%;
+    --color-content: 210deg 14% 53%;
+  }
+
+  /* If the user switchs light mode */
+  :root[data-theme="light"] {
+    --color-bgBase: 39deg 85% 95%;
+    --color-content: 0deg 0% 20%;
+  }
 }

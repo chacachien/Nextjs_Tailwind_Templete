@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
+  darkMode: "selector",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,9 +10,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+        // Using modern `hsl`
+        bgBase: 'hsl(var(--color-bgBase) / <alpha-value>)',
+        content: 'hsl(var(--color-content) / <alpha-value>)',
+      }
     },
   },
   plugins: [],
