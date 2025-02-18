@@ -1,10 +1,11 @@
 // hooks/use-auth.ts
 import { create } from 'zustand';
-import { UserRole } from '@/types/auth';
+import { User, UserRole } from '@/types/auth';
+
 
 interface AuthStore {
-  user: UserRole | null;
-  setUser: (user: UserRole | null) => void;
+  user: User | null;
+  setUser: (user: User | null) => void;
   isAuthenticated: boolean;
   token: string | null;
   setToken: (token: string | null) => void;

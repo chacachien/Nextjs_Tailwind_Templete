@@ -26,6 +26,25 @@ export interface LoginCredentials {
   password: string;
 }
 
-export interface RegisterCredentials extends LoginCredentials {
+// can't use because the datatype not match from backend
+// export interface RegisterCredentials extends LoginCredentials {
+//   name: string;
+// }
+
+export interface RegisterCredentials {
+  username: string;
+  password: string;
+  email: string;
+  first_name: string;
+  last_name: string;
+  phone: string;
+  address: string;
+}
+
+
+export interface RegisterFormData {
   name: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
 }

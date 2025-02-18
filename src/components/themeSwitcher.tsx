@@ -15,7 +15,6 @@ export const ThemeSwitcher = () => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
-  debugger;
   return (
     <button
       onClick={toggleTheme}

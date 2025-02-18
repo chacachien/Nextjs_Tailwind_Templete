@@ -21,10 +21,10 @@ const navigation = {
     { name: 'Privacy Policy', href: '/privacy' },
   ],
   social: [
-    { name: 'Facebook', icon: 'fa fa-facebook', href: '#' },
-    { name: 'Twitter', icon: 'fa fa-twitter', href: '#' },
-    { name: 'Instagram', icon: 'fa fa-instagram', href: '#' },
-    { name: 'Email', icon: 'fa fa-evelops', href: '#' },
+    { name: 'Facebook', icon: 'fa fa-brands fa-facebook', href: '#' },
+    { name: 'Twitter', icon: 'fa fa-brands fa-twitter', href: '#' },
+    { name: 'Instagram', icon: 'fa fa-brands fa-instagram', href: '#' },
+    { name: 'Email', icon: 'fa fa-regular fa-envelope', href: '#' },
   ],
 };
 

@@ -1,12 +1,13 @@
-// components/auth/login-form.tsx
+// components/auth/loginForm.tsx
 'use client';
 
 import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
-import { login } from '@/lib/services/auth';
+import { getUserInfor, login } from '@/services/api/auth';
 import { useAuth } from '@/hook/use-auth';
+import { authEndpoint } from '@/services/api/endpoints/auth';
 
 export default function LoginForm() {
   const router = useRouter();
@@ -37,8 +38,8 @@ export default function LoginForm() {
       }
 
       // Update auth state
-      setToken(data.access_token);
-      setUser(data.user);
+      const user = await getUserInfor();
+      setUser(user);
 
       // Redirect to home page
       router.push('/');
@@ -50,7 +51,7 @@ export default function LoginForm() {
   };
 
   return (
-    <div className='flex min-h-screen items-center justify-center bg-gray-50 px-4 py-12 sm:px-6 lg:px-8'>
+    <div className='flex justify-center bg-gray-50'>
       <div className='w-full max-w-md space-y-8'>
         <div>
           <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>

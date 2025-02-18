@@ -2,8 +2,8 @@
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  const authToken = request.cookies.get('auth-token');
-
+  const authToken = request.cookies.get('auth_token');
+  debugger;
   // Define protected routes
   const protectedPaths = ['/profile', '/settings', '/cart'];
   const isProtectedPath = protectedPaths.some((path) =>
