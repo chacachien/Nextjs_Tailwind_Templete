@@ -3,6 +3,19 @@ import {Metadata} from "next";
 type Props = {
     params: Promise<{ slug: string }>;
 };
+export async function generateStaticParams() {
+    // Replace this with your actual categories
+    const categories = [
+        'electronics',
+        'clothing',
+        'books',
+        // Add all your possible category slugs here
+    ];
+
+    return categories.map((category) => ({
+        slug: category,
+    }));
+}
 
 export default async function CategoryPage({ params }: Props) {
     const { slug } = await params;
