@@ -16,7 +16,7 @@ However, the design and content on current pages are only at the most basic leve
 ## 🎯 Key Features
 
 ### 🔐 Authentication
-- User registration with email
+- User registration with username & password
 - Secure login and persistent sessions
 - Token-based authentication system
 
@@ -24,7 +24,6 @@ However, the design and content on current pages are only at the most basic leve
 - Dynamic product listing and grid views
 - Smart category filtering
 - Featured products showcase
-- Real-time category page updates
 
 ### 🎨 Layout & Theming
 - Professional header & footer components
