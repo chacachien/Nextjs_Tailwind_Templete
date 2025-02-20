@@ -1,6 +1,7 @@
 # 🛍️ Next.js E-commerce Template
 
 A modern, feature-rich e-commerce template built with cutting-edge technologies for seamless online shopping experiences.
+However, the design and content on current pages are only at the most basic level, so you can easily customize them to your liking.
 
 ## ⚡ Tech Stack
 
